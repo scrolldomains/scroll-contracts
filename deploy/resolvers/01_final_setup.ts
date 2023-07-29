@@ -55,7 +55,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const providerWithSns = new ethers.providers.StaticJsonRpcProvider(
     network.name === 'goerli' ? 'https://web3metadata.ens.domains/v1/goerli' : 'https://web3metadata.ens.domains/v1/goerli',
-    { chainId: network.name === 'goerli' ? 5 : 5, name: 'goerli', ensAddress: registry.address },
+    { chainId: network.name === 'goerli' ? 5 : 5, name: 'goerli' },
   )
 
   const resolverAddr = await providerWithSns.getResolver('scroll')
