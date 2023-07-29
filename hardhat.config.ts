@@ -198,14 +198,14 @@ const config: HardhatUserConfig = {
   },
   
   etherscan: {
-    apiKey: process.env.OPSCAN_API_KEY,
+    apiKey: process.env.ETHERSCAN_API_KEY,
     customChains: [
       {
-        network: "optimism",
-        chainId: 10,
+        network: "goerli",
+        chainId: 5,
         urls: {
-          apiURL: "https://api-optimistic.etherscan.io/api",
-          browserURL: "https://optimistic.etherscan.io/"
+          apiURL: "https://api-goerli.etherscan.io/api",
+          browserURL: "https://goerli.etherscan.io/"
         }
       }
     ]
